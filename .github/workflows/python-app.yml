@@ -41,3 +41,4 @@ jobs:
     - name: Coverage
       run: |
         coverage run -m pytest main.py test.py transform.py
+        coverage report -m
