@@ -40,4 +40,4 @@ jobs:
         pytest test.py
     - name: Coverage
       run: |
-        pytest --cov=myproject ./
+        pytest --cov=.
