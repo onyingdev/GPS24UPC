@@ -27,7 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
-        pip install pytest-cov
+        pip install coverage
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -40,4 +40,4 @@ jobs:
         pytest test.py
     - name: Coverage
       run: |
-        pytest --cov=./ ./
+        coverage run -m pytest main.py test.py transform.py
